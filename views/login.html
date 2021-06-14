@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <!-- 引入normalize -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- 引入flexible -->
+    <script src="/js/flexible.js"></script>
+    <!-- 引入jquery -->
+    <script src="/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <title>login</title>
+    <style>
+        /* 默认样式开始 */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: linear-gradient(to right, #D1DEFE, #E9F3FF, #FCD0F3, #FCC3B4);
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        button {
+            outline: none;
+            border: 0;
+        }
+        
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus,
+        .btn-success {
+            outline: none;
+            box-shadow: none;
+        }
+        /* 默认样式结束 */
+        
+        .main {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .panel {
+            border-radius: .264706rem .051471rem .264706rem .051471rem;
+            padding: .264706rem;
+            background: rgb(223, 225, 250);
+            box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+            overflow: hidden;
+        }
+        
+        .login-btn {
+            float: right;
+            width: .647059rem;
+            height: .264706rem;
+            border-radius: .264706rem .051471rem .264706rem .051471rem;
+            background: rgb(223, 225, 250);
+            box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+            font-size: .132353rem;
+        }
+        
+        .panel-footer,
+        .panel-heading,
+        .panel-title {
+            background: transparent!important;
+            font-size: .264706rem;
+            color: #fff;
+            border: 0;
+        }
+        
+        .panel-body li {
+            height: .426471rem;
+            border-radius: .264706rem .051471rem .264706rem .051471rem;
+            background: rgb(223, 225, 250);
+            box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+            text-align: center;
+            line-height: .426471rem;
+            font-size: .132353rem;
+            color: #fff;
+            margin-bottom: .132353rem;
+        }
+        
+        .panel-body li input {
+            border: 0;
+            border-bottom: .014706rem solid #fff;
+            outline: none;
+            background: transparent;
+        }
+        
+        .alert-danger {
+            display: none;
+        }
+        
+        .row::after {
+            content: '1';
+            text-indent: -9999px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="column col-xs-7 main">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">登陆——KLM</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="alert alert-danger"></div>
+                        <ul>
+                            <li>请输入用户名：<input type="text" id="uname"></li>
+                            <li>请输入密码：<input type="password" id="upwd"></li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer"><button class="login-btn">登陆</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.login-btn').on('click', function() {
+            var data = {};
+            data.uname = $('#uname').val();
+            data.upwd = $('#upwd').val();
+            if (data.uname.trim() != '' && data.upwd.trim() != '') {
+                $.ajax({
+                    url: '/admin/login',
+                    method: 'post',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function(result) {
+                        if (result == 'error') {
+                            $('.alert-danger').show().text('用户名或密码错误');
+                        } else {
+                            location.assign(result)
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

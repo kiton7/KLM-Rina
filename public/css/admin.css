@@ -1,0 +1,69 @@
+/* 默认样式开始 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #D1DEFE, #E9F3FF, #FCD0F3, #FCC3B4);
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: 0;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus,
+.btn-success {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* 默认样式结束 */
+
+.main-box {
+    padding: .220588rem .279412rem .220588rem .264706rem;
+}
+
+.main {
+    background: #fff;
+    padding: .264706rem;
+    border-radius: .264706rem .051471rem .264706rem .051471rem;
+}
+
+.main .nav-tabs {
+    margin-bottom: .132353rem;
+    border-radius: .264706rem .051471rem .264706rem .051471rem;
+    background: rgb(223, 225, 250);
+    box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+}
+
+.main .nav-tabs .active a {
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+}
+
+.main .nav-tabs li a {
+    border-radius: .264706rem .051471rem .264706rem .051471rem;
+    background: transparent;
+}
+
+.main .tab-content {
+    padding: .132353rem;
+    background: rgb(223, 225, 250);
+    box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+}
+
+.alert-danger {
+    display: none;
+}

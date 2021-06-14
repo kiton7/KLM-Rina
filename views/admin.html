@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <!-- 引入normalize -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- 引入jquery -->
+    <script src="/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 引入flexible -->
+    <script src="/js/flexible.js"></script>
+    <script src="/js/art-template.js"></script>
+    <script src="/js/admin.js"></script>
+    <title>KLM</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+    <div class="modal fade" id="klm-info" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger"></div>
+                    <ul class="list-group">
+                        <li class="list-group-item">用户名：<input type="text" name="uname" value="{{userInfo.uname}}" id="nuname"></li>
+                        <li class="list-group-item ">修改后的密码：<input type="password" id="cpwd1"></li>
+                        <li class="list-group-item ">再次输入修改后的密码：<input type="password" id="cpwd2"></li>
+                        <li class="list-group-item ">用户角色：<select id="nrole"><option value="0">管理员</option><option value="1">普通用户</option></select></li>
+                        <li class="list-group-item ">修改的主题：<input type="text" value="{{userInfo.topic}}" id="ctopic"></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="user-change-btn" data-uid="{{@userInfo._id}}">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="klm-adduser" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">修改信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger"></div>
+                    <ul class="list-group ">
+                        <li class="list-group-item ">用户名：<input type="text" id="uname"></li>
+                        <li class="list-group-item ">密码：<input type="password" id="upwd"></li>
+                        <li class="list-group-item ">用户角色：<select id="role"><option value="0">管理员</option><option value="1">普通用户</option></select></li>
+                        <li class="list-group-item ">主题：<input type="text" id="topic"></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" id="adduser">创建用户</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid ">
+        <div class="row main-box ">
+            <div class="column main ">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                    <li id="emojilist"><a href="#emojis" data-toggle="tab">表情管理</a></li>
+                    <li id="analist"><a href="#animations" data-toggle="tab">方案管理</a></li>
+                    <li id="userlist"><a href="#users" data-toggle="tab">用户管理</a></li>
+                    <li><a href="/">KLM</a></li>
+                    <script id="emojiss" type="text/html">
+                        <%for(var i = 0; i < data.records.length; i++){%>
+                            <tr>
+                                <td>
+                                    <%=i%>
+                                </td>
+                                <td>
+                                    <%=data.records[i].ename%>
+                                </td>
+                                <td>
+                                    <%=data.records[i].auther%>
+                                </td>
+                                <td><span class="glyphicon glyphicon-remove" data-id="<%-data.records[i]._id%>"></span></td>
+                            </tr>
+                            <%}%>
+                    </script>
+                    <script id="anass" type="text/html">
+                        <%for(var i = 0; i < data.records.length; i++){%>
+                            <tr>
+                                <td>
+                                    <%=i%>
+                                </td>
+                                <td>
+                                    <%=data.records[i].aname%>
+                                </td>
+                                <td>
+                                    <%=data.records[i].auther%>
+                                </td>
+                                <td><span class="glyphicon glyphicon-remove" data-id="<%-data.records[i]._id%>"></span></td>
+                            </tr>
+                            <%}%>
+                    </script>
+                    <script id="userss" type="text/html">
+                        <%for(var i = 0; i < data.records.length; i++){%>
+                            <tr>
+                                <td>
+                                    <%=i%>
+                                </td>
+                                <td>
+                                    <%=data.records[i].uname%>
+                                </td>
+                                <td>
+                                    收藏的表情：
+                                    <%=data.records[i].loveemoji.length%>收藏的方案：
+                                        <%=data.records[i].loveanimation.length%>
+                                </td>
+                                <td><span class="glyphicon glyphicon-remove" data-id="<%-data.records[i]._id%>"></span></td>
+                            </tr>
+                            <%}%>
+                    </script>
+                </ul>
+                <div class="tab-content ">
+                    <div class="tab-pane active" id="home">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#klm-info ">
+                                  修改信息
+                                </button></li>
+                            <li class="list-group-item"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#klm-adduser">
+                                添加用户
+                              </button></li>
+                            <li class="list-group-item"><a href="/admin/logout" class="btn btn-primary" id="logout-btn">
+                                退出登陆
+                              </a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="emojis">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>表情名</td>
+                                    <td>作者</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <nav>
+                            <ul class="pagination">
+                                <li>
+                                    <a class="before">
+                                        <span>&laquo;</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="next">
+                                        <span>&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="tab-pane" id="animations">
+                        <table class="table table-hover ">
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>方案名</td>
+                                    <td>作者</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <ul class="pagination">
+                            <li>
+                                <a class="before">
+                                    <span>&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="next">
+                                    <span>&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane " id="users">
+                        <table class="table table-hover ">
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>用户名</td>
+                                    <td>用户表情和方案数量</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <ul class="pagination">
+                            <li>
+                                <a class="before">
+                                    <span>&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="next">
+                                    <span>&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

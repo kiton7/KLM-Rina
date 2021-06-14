@@ -1,0 +1,783 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?fhm575');
+    src: url('../fonts/icomoon.eot?fhm575#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?fhm575') format('truetype'), url('../fonts/icomoon.woff?fhm575') format('woff'), url('../fonts/icomoon.svg?fhm575#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* 默认样式开始 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #D1DEFE, #E9F3FF, #FCD0F3, #FCC3B4);
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: 0;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus,
+.btn-success {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* 默认样式结束 */
+
+
+/* 顶部导航栏开始 */
+
+.header {
+    /* position: relative; */
+    height: 1.546667rem;
+    background: linear-gradient(to right, #D1DEFE, #E9F3FF, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+}
+
+h1 {
+    margin: 0;
+    float: left;
+    overflow: hidden;
+    font-size: 1.026667rem;
+    line-height: 1.546667rem;
+}
+
+.logo {
+    width: 2.346667rem;
+    height: 1.546667rem;
+    margin-left: .48rem;
+    color: #fff;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.timeleft {
+    float: right;
+    margin-right: .506667rem;
+    font-size: .4rem;
+    color: #fff;
+    line-height: 1.546667rem;
+}
+
+#KLM-choose {
+    outline: none;
+    float: right;
+    margin-top: .406413rem;
+    margin-right: .278184rem;
+    padding-left: .093333rem;
+    font-size: .506413rem;
+    color: #D1DEFE;
+    border-radius: .263543rem .051245rem .263543rem .051245rem;
+}
+
+
+/* 顶部导航栏结束 */
+
+
+/* 主体部分开始 */
+
+.main {
+    padding: .4rem .506667rem .4rem .48rem;
+}
+
+
+/* 主体部分结束 */
+
+
+/* 主体--左开始 */
+
+.main-left {
+    margin-bottom: .466667rem;
+    border-radius: .24rem;
+    padding: .24rem;
+    width: 9.013333rem;
+    height: 10.573333rem;
+    background: #fff;
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+}
+
+
+/* 主体--左结束 */
+
+
+/* 主体--左--选项栏开始 */
+
+.main-left-nav {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 1.546667rem;
+    height: 10.093333rem;
+    background: rgb(223, 225, 250);
+    box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+}
+
+.main-left-nav li {
+    flex: 1;
+    border-radius: .263543rem .051245rem .263543rem .051245rem;
+}
+
+.main-left-nav>li>div {
+    padding-top: .24rem;
+    height: 100%;
+    font-size: .48rem;
+    color: #fff;
+    text-align: center;
+}
+
+.main-left-nav>.active {
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+}
+
+
+/* 主体--左--选项栏结束 */
+
+
+/* 主体--左--内容开始 */
+
+.main-left-main {
+    float: right;
+    /* margin-left: .24rem; */
+    padding: .213333rem .24rem .24rem .24rem;
+    border-radius: .24rem;
+    width: 6.773333rem;
+    height: 10.093333rem;
+    background: rgb(223, 225, 250);
+    box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+}
+
+
+/* 主体--左--内容结束 */
+
+
+/* 主体--左--列表开始 */
+
+.emojilist-box li,
+.animationlist-box li {
+    position: relative;
+    border-radius: .24rem;
+    padding: .24rem;
+    width: 6.293333rem;
+    height: 2.04rem;
+    background: #fff;
+}
+
+.emojilist-box li:nth-child(-n+3),
+.animationlist-box li:nth-child(-n+3) {
+    margin-bottom: .12rem;
+}
+
+.emojilist-box li .emojilist-img,
+.animationlist-box li .animationlist-img {
+    float: left;
+    /* margin-left: 1.106667rem; */
+    /* margin-bottom: .24rem; */
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 2.4rem;
+    height: 1.6rem;
+    background: pink;
+}
+
+.emojilist-box li .send-btn,
+.animationlist-box li .send-btn {
+    margin-bottom: .12rem;
+}
+
+.emojilist-box li button,
+.animationlist-box li button {
+    float: right;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 2.786667rem;
+    height: .773333rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    color: #fff;
+}
+
+.animationlist-box li .show-a {
+    position: absolute;
+    top: -0.12rem;
+    left: -0.12rem;
+    transform: translateX(-20%);
+    width: .707233rem;
+    height: .548858rem;
+    font-size: .10619rem;
+    color: #fff;
+    border-radius: .133543rem .025245rem .133543rem .025245rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+}
+
+.emojilist-box li .close-btn,
+.animationlist-box li .close-btn {
+    position: absolute;
+    top: -0.12rem;
+    right: -0.12rem;
+    width: .333333rem;
+    height: .333333rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    border-radius: .333333rem;
+    text-align: center;
+    font-size: .24rem;
+    line-height: .333333rem;
+}
+
+.change-page {
+    overflow: hidden;
+}
+
+.change-page .before,
+.change-page .next {
+    float: left;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 3.026667rem;
+    height: .96rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    text-align: center;
+    font-size: .48rem;
+    line-height: .96rem;
+    color: #fff;
+}
+
+.change-page .next {
+    float: right;
+}
+
+
+/* 主体--左--列表结束 */
+
+
+/* 主体--左--新建表情开始 */
+
+
+/* .newemoji-error-info{
+    display: none;
+}
+.newemoji-btn,.newemoji-error-info{
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 100%;
+    height: 1.173333rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    font-size: .48rem;
+    color: #fff;
+} */
+
+#main-left-main-newemoji {
+    overflow: hidden;
+}
+
+.newemoji-left {
+    margin-bottom: .24rem;
+    width: 6.293333rem;
+    height: 3.36rem;
+    position: relative;
+}
+
+.newemoji-right {
+    width: 6.293333rem;
+    height: 5.986667rem;
+}
+
+.newemoji-btn {
+    float: left;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 1.173333rem;
+    height: 2.4rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    font-size: .266667rem;
+    color: #fff;
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+}
+
+.newemoji-error-info {
+    display: none;
+    margin-bottom: .24rem;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 6.293333rem;
+    height: .773333rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    text-align: center;
+    line-height: .773333rem;
+    font-size: .266667rem;
+    color: #fff;
+}
+
+.newemoji-cl-item {
+    margin-bottom: .24rem;
+    padding: 0 .48rem;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 6.293333rem;
+    height: .773333rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    font-size: .266667rem;
+    line-height: .773333rem;
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+}
+
+.newemoji-info {
+    border-radius: .263543rem .051245rem .263543rem .051245rem;
+    padding: .48rem;
+    width: 6.293333rem;
+    height: 1.933333rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+}
+
+.newemoji-img {
+    float: right;
+    width: 3.613333rem;
+    height: 2.4rem;
+    background-color: #fff;
+}
+
+.newemoji-img canvas {
+    width: 3.613333rem!important;
+    height: 2.4rem!important;
+}
+
+.newemoji-cl-item>div {
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    border: .014641rem solid #fff;
+    border-radius: .2rem;
+    width: 70%;
+    height: .4rem;
+    overflow: hidden;
+}
+
+.newemoji-cl-item>div>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: .146413rem; */
+    height: .4rem;
+    /* background: #ccc; */
+}
+
+.newemoji-cl-item>input {
+    outline: none;
+    border: 0;
+    border-bottom: .014641rem solid #fff;
+    width: 20%;
+    background: transparent;
+}
+
+.newemoji-info li {
+    /* margin-bottom: .263543rem; */
+    height: .48rem;
+    font-size: .24rem;
+    line-height: .48rem;
+}
+
+.newemoji-info li input {
+    outline: none;
+    border: 0;
+    border-bottom: .014641rem solid #fff;
+    background: transparent;
+}
+
+.save-emoji-btn {
+    float: right;
+    margin-top: .263543rem;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 1.173333rem;
+    height: .48rem;
+    background: linear-gradient(to right, #D1DEFE, #E9F3FF);
+    box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+}
+
+
+/* 主体--左--新建表情结束 */
+
+
+/* 主体--左--新建方案开始 */
+
+#main-left-main-newanimation {
+    position: relative;
+    overflow: hidden;
+    width: 6.293333rem;
+    height: 9.64rem;
+}
+
+.newanimation-show {
+    position: absolute;
+    right: 0;
+    top: .986667rem;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 3.613333rem;
+    height: 2.4rem;
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    background: pink;
+    overflow: hidden;
+}
+
+.newanimation-error-info {
+    padding: 0 .48rem;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 6.293333rem;
+    height: .773333rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    color: #fff;
+    font-size: .266667rem;
+    line-height: .773333rem;
+    display: none;
+}
+
+.save-animation-btn {
+    margin-top: .263543rem;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: .644217rem;
+    height: .263543rem;
+    background: linear-gradient(to right, #D1DEFE, #E9F3FF);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+}
+
+.add-animation-emoji-btn {
+    position: absolute;
+    left: 0;
+    top: .986667rem;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 1.173333rem;
+    height: 2.4rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    color: #fff;
+    font-size: .266667rem;
+}
+
+.animation-tabs-box {
+    position: absolute;
+    top: 3.6rem;
+    box-sizing: border-box;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    padding: .24rem;
+    width: 6.293333rem;
+    height: 3.826667rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    overflow: auto;
+    font-size: .266667rem;
+}
+
+.animation-tabs-box h4 {
+    font-size: .266667rem;
+    color: #fff;
+}
+
+.animation-tabs-box .nav li a {
+    padding: .093333rem;
+}
+
+.animation-set-box {
+    position: absolute;
+    bottom: 0;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 6.293333rem;
+    height: 1.933333rem;
+    /* background: pink; */
+}
+
+.animation-set-box li {
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    padding: 0 .263543rem;
+    height: .56rem;
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+    font-size: .266667rem;
+    line-height: .56rem;
+    color: #fff;
+}
+
+.animation-set-box li:nth-child(-n+2) input {
+    outline: none;
+    border: 0;
+    border-bottom: .014641rem solid #fff;
+    width: 30%;
+    background: transparent;
+}
+
+.animation-set-box li:nth-child(-n+2) {
+    margin-bottom: .12rem;
+}
+
+.animation-set-box li:last-child button {
+    /* margin-top: .080527rem; */
+    float: right;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    height: .56rem;
+    width: 1.173333rem;
+    background: linear-gradient(to right, #D1DEFE, #E9F3FF);
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+}
+
+
+/* 主体--左--新建方案结束 */
+
+
+/* 主体--右开始 */
+
+.main-right {
+    border-radius: .24rem;
+    padding: .24rem .213333rem .24rem .24rem;
+    width: 9.013333rem;
+    height: 4.4rem;
+    background: #fff;
+    box-shadow: .006667rem .02rem .093333rem rgb(150 58 91 / 36%);
+}
+
+
+/* 主体--右结束 */
+
+
+/* 主体--右--设置盒子开始 */
+
+.set-navbox {
+    overflow: hidden;
+}
+
+.set-navbox>li {
+    float: left;
+    overflow: hidden;
+}
+
+.set-navbox>.panel {
+    border: 0;
+}
+
+.set-navbox>li>h3,
+.set-navbox li>a {
+    display: block;
+    margin: 0;
+    border-radius: .292826rem .029283rem .292826rem .029283rem;
+    padding-top: .48rem;
+    width: 1.173333rem;
+    height: 3.92rem;
+    box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    text-align: center;
+    line-height: .72rem;
+    color: #fff;
+    font-size: .64rem;
+}
+
+.set-navbox>li>h3 {
+    margin-right: .2rem;
+    float: left;
+}
+
+.set-navbox>li>div {
+    /* margin-left: .24rem; */
+    margin-right: .24rem;
+    float: left;
+    padding: 0;
+    width: 4.32rem;
+    height: 3.92rem;
+    border-radius: .24rem;
+    box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+    background: linear-gradient(to right, #FCD0F3, #FCC3B4);
+    overflow: auto;
+}
+
+
+/* 主体--右--设置盒子结束 */
+
+
+/* 主体--右--设置盒子--用户+主题设置开始 */
+
+.user-info,
+.topic-info {
+    padding: .24rem .48rem;
+}
+
+.user-info .user-name,
+.topic-info .topic-name {
+    margin-bottom: .24rem;
+    text-align: center;
+    font-size: .266667rem;
+    color: #fff;
+}
+
+.user-info .user-change li,
+.topic-info .topic-change li {
+    margin-bottom: .24rem;
+    height: 1.173333rem;
+    font-size: .266667rem;
+    color: #fff;
+}
+
+.user-info .user-change li input,
+.topic-info .topic-change li input {
+    outline: none;
+    border: 0;
+    border-bottom: .014641rem solid #fff;
+    background: transparent;
+    color: #000;
+}
+
+.user-change-save-btn,
+.topic-change-save-btn {
+    /* margin-top: .131772rem; */
+    margin-top: .24rem;
+    border-radius: .48rem .093333rem .48rem .093333rem;
+    width: 100%;
+    height: .773333rem;
+    background: linear-gradient(to right, #D1DEFE, #E9F3FF);
+    box-shadow: .00366rem .009517rem .052709rem rgb(150 58 91 / 36%);
+    font-size: .266667rem;
+    color: #fff;
+}
+
+
+/* 主体--右--设置盒子--用户+主题设置结束 */
+
+
+/* 表情模态框开始 */
+
+
+/* 表情盒子开始 */
+
+#newemoji .modal-dialog,
+#newemoji .modal-content,
+#newemoji .modal-header,
+#newemoji .modal-body,
+#newemoji .modal-footer {
+    width: 9.333333rem!important;
+}
+
+#newemoji .modal-header,
+#newemoji .modal-footer {
+    height: .773333rem!important;
+    font-size: .24rem!important;
+}
+
+#newemoji .modal-header {
+    padding-top: .2rem;
+}
+
+#newemoji .modal-header button {
+    width: .293333rem;
+    height: .293333rem;
+    font-size: .266667rem;
+}
+
+#newemoji .modal-footer {
+    padding: 0;
+}
+
+#newemoji .modal-footer button {
+    /* margin-top: .073206rem; */
+    margin-right: .24rem;
+    padding: 0;
+    width: 2.346667rem;
+    height: .773333rem;
+    font-size: .266667rem;
+}
+
+.emoji-box {
+    position: relative;
+    /* left: 5%; */
+    /* padding: 0.137rem; */
+    margin-left: .48rem;
+    width: 7.466667rem;
+    height: 5.226667rem;
+    border: .036603rem solid #ccc;
+    border-radius: .036603rem;
+}
+
+.emoji-box ul {
+    margin: 0;
+}
+
+.left-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.right-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.bottom-box {
+    position: absolute;
+    left: 1.8rem;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.left-box>div {
+    float: left;
+}
+
+.right-box>div {
+    float: left;
+}
+
+.bottom-box>div {
+    float: left;
+}
+
+.left-box>div>ul>li,
+.right-box>div>ul>li,
+.bottom-box>div>ul>li {
+    margin: .02rem;
+    width: .333333rem;
+    height: .333333rem;
+    border-radius: .026667rem;
+    background-color: #ccc;
+}
+
+.emoji-box>div>div>ul>.choose {
+    background-color: pink;
+}
+
+.resetbtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resetbtn {
+    top: 30%;
+}
+
+
+/* 表情盒子结束 */
+
+
+/* 表情模态框结束 */
